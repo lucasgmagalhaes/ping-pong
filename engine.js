@@ -81,9 +81,9 @@ function moveBall() {
 }
 
 function movePlayer() {
-    if (parseInt(player.style.left) >= 0 && playerDirection === 'left') {
+    if (parseInt(player.style.left) > 0 && playerDirection === 'left') {
         player.style.left = parseInt(player.style.left) - 1 + 'px';
-    } else if (parseInt(player.style.left) <= getContainerWidth() - getPlayerWidth() && 
+    } else if (parseInt(player.style.left) < getContainerWidth() - getPlayerWidth() && 
         playerDirection === 'right') {
         player.style.left = parseInt(player.style.left) + 1 + 'px';
     }
@@ -101,10 +101,10 @@ function calcColision() {
 function ballMove() {
     setInterval(function () {
 
-        if (parseInt(ball.style.top) >= getContainerHeight() - getPlayerHeight() - getBallHeight()) {
+        if (parseInt(ball.style.top) > getContainerHeight() - getPlayerHeight() - getBallHeight()) {
             ballDirecton = 'top';
         }
-        else if (parseInt(ball.style.top) <= getPlayerHeight()) {
+        else if (parseInt(ball.style.top) < getPlayerHeight()) {
             ballDirecton = 'bottom';
         }
 
