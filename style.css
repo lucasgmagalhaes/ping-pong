@@ -1,0 +1,22 @@
+#container {
+    margin: 0 auto;
+    position: relative;
+    background: yellow;
+}
+
+#one {
+    height: 30px;
+    width: 200px;
+    background: blue;
+}
+
+#two {
+    background: red;
+}
+
+#ball{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: black;  
+}
